@@ -3,7 +3,7 @@
       {
          "scenarioName":"Login Com sucesso",
          "request":{
-            "urlPathPattern":"/(.*)/qazando-login",
+            "urlPathPattern":"/qazando-login",
             "method":"POST",
             "headers":{
                
@@ -30,7 +30,7 @@
       {
          "scenarioName":"Login Usuario ou senha Incorreto",
          "request":{
-            "urlPathPattern":"/(.*)/qazando-login",
+            "urlPathPattern":"/qazando-login",
             "method":"POST",
             "headers":{
                
@@ -40,7 +40,7 @@
                   "matchesJsonPath":"$.[?($.username == '123456')]"
                },
                {
-                  "matchesJsonPath":"$.[?($.password != '112233')]"
+                  "matchesJsonPath":"$.[?($.password == '556677')]"
                }
             ]
          },
@@ -57,7 +57,7 @@
       {
          "scenarioName":"Login Erro Servidor",
          "request":{
-            "urlPathPattern":"/(.*)/qazando-login",
+            "urlPathPattern":"/qazando-login",
             "method":"POST",
             "headers":{
                
