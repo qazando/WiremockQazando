@@ -3,23 +3,17 @@
       {
          "scenarioName":"Login Com sucesso",
          "request":{
-            "urlPathPattern":"/(.*)/qazando-login",
+            "urlPathPattern":"/qazando-login",
             "method":"POST",
             "headers":{
                
             },
             "bodyPatterns":[
                {
-                  "matchesJsonPath":"$.[?($.grant_type == 'password')]"
-               },
-               {
                   "matchesJsonPath":"$.[?($.username == '123456')]"
                },
                {
                   "matchesJsonPath":"$.[?($.password == '112233')]"
-               },
-               {
-                  "matchesJsonPath":"$.client_id"
                }
             ]
          },
@@ -36,23 +30,17 @@
       {
          "scenarioName":"Login Usuario ou senha Incorreto",
          "request":{
-            "urlPathPattern":"/(.*)/qazando-login",
+            "urlPathPattern":"/qazando-login",
             "method":"POST",
             "headers":{
                
             },
             "bodyPatterns":[
                {
-                  "matchesJsonPath":"$.[?($.grant_type == 'password')]"
-               },
-               {
                   "matchesJsonPath":"$.[?($.username == '123456')]"
                },
                {
-                  "matchesJsonPath":"$.[?($.password != '112233')]"
-               },
-               {
-                  "matchesJsonPath":"$.client_id"
+                  "matchesJsonPath":"$.[?($.password == '556677')]"
                }
             ]
          },
@@ -69,23 +57,17 @@
       {
          "scenarioName":"Login Erro Servidor",
          "request":{
-            "urlPathPattern":"/(.*)/qazando-login",
+            "urlPathPattern":"/qazando-login",
             "method":"POST",
             "headers":{
                
             },
             "bodyPatterns":[
                {
-                  "matchesJsonPath":"$.[?($.grant_type == 'password')]"
-               },
-               {
                   "matchesJsonPath":"$.[?($.username == '123456')]"
                },
                {
                   "matchesJsonPath":"$.[?($.password == '123456')]"
-               },
-               {
-                  "matchesJsonPath":"$.client_id"
                }
             ]
          },
