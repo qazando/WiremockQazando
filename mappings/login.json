@@ -1,0 +1,103 @@
+{
+   "mappings":[
+      {
+         "scenarioName":"Login Com sucesso",
+         "request":{
+            "urlPathPattern":"/(.*)/qazando-login",
+            "method":"POST",
+            "headers":{
+               
+            },
+            "bodyPatterns":[
+               {
+                  "matchesJsonPath":"$.[?($.grant_type == 'password')]"
+               },
+               {
+                  "matchesJsonPath":"$.[?($.username == '123456')]"
+               },
+               {
+                  "matchesJsonPath":"$.[?($.password == '112233')]"
+               },
+               {
+                  "matchesJsonPath":"$.client_id"
+               }
+            ]
+         },
+         "response":{
+            "status":201,
+            "headers":{
+               "Content-Type":"application/json"
+            },
+            "jsonBody":{
+               "message":"Usuario logado com sucesso"
+            }
+         }
+      },
+      {
+         "scenarioName":"Login Usuario ou senha Incorreto",
+         "request":{
+            "urlPathPattern":"/(.*)/qazando-login",
+            "method":"POST",
+            "headers":{
+               
+            },
+            "bodyPatterns":[
+               {
+                  "matchesJsonPath":"$.[?($.grant_type == 'password')]"
+               },
+               {
+                  "matchesJsonPath":"$.[?($.username == '123456')]"
+               },
+               {
+                  "matchesJsonPath":"$.[?($.password != '112233')]"
+               },
+               {
+                  "matchesJsonPath":"$.client_id"
+               }
+            ]
+         },
+         "response":{
+            "status":400,
+            "headers":{
+               "Content-Type":"application/json"
+            },
+            "jsonBody":{
+               "message":"Usuario ou senha incorreto"
+            }
+         }
+      },
+      {
+         "scenarioName":"Login Erro Servidor",
+         "request":{
+            "urlPathPattern":"/(.*)/qazando-login",
+            "method":"POST",
+            "headers":{
+               
+            },
+            "bodyPatterns":[
+               {
+                  "matchesJsonPath":"$.[?($.grant_type == 'password')]"
+               },
+               {
+                  "matchesJsonPath":"$.[?($.username == '123456')]"
+               },
+               {
+                  "matchesJsonPath":"$.[?($.password == '123456')]"
+               },
+               {
+                  "matchesJsonPath":"$.client_id"
+               }
+            ]
+         },
+         "response":{
+            "status":500,
+            "headers":{
+               "Content-Type":"application/json"
+            },
+            "jsonBody":{
+               "message":"Algo deu errado tente novamente mais tarde"
+            }
+         }
+      }
+   ]
+}
