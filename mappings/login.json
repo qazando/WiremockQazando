@@ -10,16 +10,10 @@
             },
             "bodyPatterns":[
                {
-                  "matchesJsonPath":"$.[?($.grant_type == 'password')]"
-               },
-               {
                   "matchesJsonPath":"$.[?($.username == '123456')]"
                },
                {
                   "matchesJsonPath":"$.[?($.password == '112233')]"
-               },
-               {
-                  "matchesJsonPath":"$.client_id"
                }
             ]
          },
@@ -43,16 +37,10 @@
             },
             "bodyPatterns":[
                {
-                  "matchesJsonPath":"$.[?($.grant_type == 'password')]"
-               },
-               {
                   "matchesJsonPath":"$.[?($.username == '123456')]"
                },
                {
                   "matchesJsonPath":"$.[?($.password != '112233')]"
-               },
-               {
-                  "matchesJsonPath":"$.client_id"
                }
             ]
          },
@@ -76,16 +64,10 @@
             },
             "bodyPatterns":[
                {
-                  "matchesJsonPath":"$.[?($.grant_type == 'password')]"
-               },
-               {
                   "matchesJsonPath":"$.[?($.username == '123456')]"
                },
                {
                   "matchesJsonPath":"$.[?($.password == '123456')]"
-               },
-               {
-                  "matchesJsonPath":"$.client_id"
                }
             ]
          },
