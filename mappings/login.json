@@ -10,10 +10,10 @@
             },
             "bodyPatterns":[
                {
-                  "matchesJsonPath":"$.[?($.username == '123456')]"
+                  "matchesJsonPath":"$.[?($.username == 'contato@qazando.com.br')]"
                },
                {
-                  "matchesJsonPath":"$.[?($.password == '112233')]"
+                  "matchesJsonPath":"$.[?($.password == '123')]"
                }
             ]
          },
@@ -37,10 +37,10 @@
             },
             "bodyPatterns":[
                {
-                  "matchesJsonPath":"$.[?($.username == '123456')]"
+                  "matchesJsonPath":"$.[?($.username == 'contato@qazando.com.br')]"
                },
                {
-                  "matchesJsonPath":"$.[?($.password == '556677')]"
+                  "matchesJsonPath":"$.[?($.password == '400')]"
                }
             ]
          },
@@ -64,10 +64,10 @@
             },
             "bodyPatterns":[
                {
-                  "matchesJsonPath":"$.[?($.username == '123456')]"
+                  "matchesJsonPath":"$.[?($.username == 'contato@qazando.com.br')]"
                },
                {
-                  "matchesJsonPath":"$.[?($.password == '123456')]"
+                  "matchesJsonPath":"$.[?($.password == '500')]"
                }
             ]
          },

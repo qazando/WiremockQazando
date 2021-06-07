@@ -1,0 +1,23 @@
+{
+   "mappings": [
+      {
+         "scenarioName": "Consultar usuário",
+         "request": {
+            "urlPathPattern": "/qazando-user",
+            "method": "GET",
+            "headers": {},
+            "bodyPatterns": []
+         },
+         "response": {
+            "status": 201,
+            "headers": {
+               "Content-Type": "application/json"
+            },
+            "jsonBody": {
+               "name": "Eduardo",
+               "nuPedidos": "4"
+            }
+         }
+      }
+   ]
+}

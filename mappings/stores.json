@@ -1,0 +1,51 @@
+{
+   "mappings": [
+      {
+         "scenarioName": "Consultar restaurantes",
+         "request": {
+            "urlPathPattern": "/qazando-store",
+            "method": "GET",
+            "headers": {},
+            "bodyPatterns": []
+         },
+         "response": {
+            "status": 201,
+            "headers": {
+               "Content-Type": "application/json"
+            },
+            "jsonBody": {
+               "stores": [
+                  {
+                     "name": "Restaurant BEEF & GRILL",
+                     "logo": "https://i.pinimg.com/originals/15/28/8f/15288fc2f8a3bfd88b668ea1d8f0311e.jpg",
+                     "description": "O melhor restaurante de Floripa.",
+                     "km": "3.6",
+                     "stars": "4.5"
+                  },
+                  {
+                     "name": "PAstelaria do Zé",
+                     "logo": "https://img.elo7.com.br/product/zoom/3247309/criacao-de-logo-marca-logotipo.jpg",
+                     "description": "Muito mais que pastel",
+                     "km": "5.7",
+                     "stars": "4.1"
+                  },
+                  {
+                     "name": "Pizza Hut",
+                     "logo": "https://wqkt.com/wp-content/uploads/2020/04/pzza-hut.jpg",
+                     "description": "Experimente a melhor e mais famosa pizza do mundo!",
+                     "km": "3.0",
+                     "stars": "4.8"
+                  },
+                  {
+                     "name": "Burguer King",
+                     "logo": "https://logosmarcas.net/wp-content/uploads/2020/08/Burger-King-Logo.png",
+                     "description": "O verdadeiro hamburguer feito na brasa",
+                     "km": "1.7",
+                     "stars": "4.9"
+                  }
+               ]
+            }
+         }
+      }
+   ]
+}
